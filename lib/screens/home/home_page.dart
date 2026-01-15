@@ -13,7 +13,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  // Indeks halaman yang sedang aktif (8: Praduk, 1: Keranjang, 2: Profil)
+  // Indeks halaman yang sedang aktif (6: Produk, 1: Keranjang, 2: Profil)
   int _selectedIndex = 0;
 
   // Daftar halaman yang akan ditampilkan sesuai menu navigasi
@@ -36,20 +36,28 @@ class _HomePageState extends State<HomePage> {
       appBar: _selectedIndex == 0
           ? AppBar(
               elevation: 0,
-              backgroundColor: Colors.white,
-              title: SizedBox(
-                height: 45,
-                child: TextField(
-                  decoration: InputDecoration(
-                    hintText: 'Cari produk impian...',
-                    prefixIcon: Icon(Icons.search, color: Colors.grey),
-                    filled: true,
-                    fillColor: Colors.grey[100],
-                    border: OutlineInputBorder(
-                      borderRadius: BorderRadius.circular(12),
-                      borderSide: BorderSide.none,
-                    ),
+              backgroundColor: Colors.blueAccent,
+              title: TextField(
+                decoration: InputDecoration(
+                  hintText: 'Cari produk impian...',
+                  hintStyle: TextStyle(
+                    color: Colors.white,
+                    fontSize: 16.0,
+                    fontWeight: FontWeight.w600,
                   ),
+                  prefixIcon: Icon(
+                    Icons.search,
+                    color: Colors.grey[200],
+                    size: 20,
+                  ),
+                  filled: true,
+                  fillColor: const Color.fromARGB(255, 166, 198, 255),
+                  border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(12),
+                    borderSide: BorderSide.none,
+                  ),
+                  contentPadding: EdgeInsets.zero,
+                  isDense: true,
                 ),
               ),
             )

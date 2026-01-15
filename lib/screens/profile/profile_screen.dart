@@ -39,11 +39,18 @@ class ProfileScreen extends StatelessWidget {
         ),
       ),
       child: Column(
-        children: const [
+        children: [
           CircleAvatar(
             radius: 50,
             backgroundColor: Colors.blueAccent,
-            child: Icon(Icons.person, size: 50, color: Colors.white),
+            child: ClipOval(
+              child: Image.network(
+                'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_5GA6FzYwrhJ6xBd2BFMO_6S7841SwK4lRw&s',
+                width: 90,
+                height: 90,
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
 
           SizedBox(height: 15),
